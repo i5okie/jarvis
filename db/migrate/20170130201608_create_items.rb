@@ -4,7 +4,7 @@ class CreateItems < ActiveRecord::Migration[5.0]
       t.string :name
       t.string :description
       t.string :manufacturer
-      t.string :model_name
+      t.string :model
       t.string :length
       t.string :wirdth
       t.string :height

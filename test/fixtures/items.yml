@@ -4,7 +4,7 @@ one:
   name: MyString
   description: MyString
   manufacturer: MyString
-  model_name: MyString
+  model: MyString
   length: MyString
   wirdth: MyString
   height: MyString
@@ -15,7 +15,7 @@ two:
   name: MyString
   description: MyString
   manufacturer: MyString
-  model_name: MyString
+  model: MyString
   length: MyString
   wirdth: MyString
   height: MyString

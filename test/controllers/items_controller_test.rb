@@ -17,7 +17,7 @@ class ItemsControllerTest < ActionDispatch::IntegrationTest
 
   test "should create item" do
     assert_difference('Item.count') do
-      post items_url, params: { item: { description: @item.description, height: @item.height, length: @item.length, manufacturer: @item.manufacturer, model_name: @item.model_name, name: @item.name, shipping_weight_kgs: @item.shipping_weight_kgs, shipping_weight_lbs: @item.shipping_weight_lbs, wirdth: @item.wirdth } }
+      post items_url, params: { item: { description: @item.description, height: @item.height, length: @item.length, manufacturer: @item.manufacturer, model: @item.model, name: @item.name, shipping_weight_kgs: @item.shipping_weight_kgs, shipping_weight_lbs: @item.shipping_weight_lbs, wirdth: @item.wirdth } }
     end
 
     assert_redirected_to item_url(Item.last)
@@ -34,7 +34,7 @@ class ItemsControllerTest < ActionDispatch::IntegrationTest
   end
 
   test "should update item" do
-    patch item_url(@item), params: { item: { description: @item.description, height: @item.height, length: @item.length, manufacturer: @item.manufacturer, model_name: @item.model_name, name: @item.name, shipping_weight_kgs: @item.shipping_weight_kgs, shipping_weight_lbs: @item.shipping_weight_lbs, wirdth: @item.wirdth } }
+    patch item_url(@item), params: { item: { description: @item.description, height: @item.height, length: @item.length, manufacturer: @item.manufacturer, model: @item.model, name: @item.name, shipping_weight_kgs: @item.shipping_weight_kgs, shipping_weight_lbs: @item.shipping_weight_lbs, wirdth: @item.wirdth } }
     assert_redirected_to item_url(@item)
   end
 
