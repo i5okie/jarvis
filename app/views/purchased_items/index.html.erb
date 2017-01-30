@@ -15,8 +15,8 @@
   <tbody>
     <% @purchased_items.each do |purchased_item| %>
       <tr>
-        <td><%= purchased_item.item %></td>
-        <td><%= purchased_item.sales_order %></td>
+        <td><%= purchased_item.item.id %>  <%= purchased_item.item.name %></td>
+        <td><%= purchased_item.sales_order.number %> <%= purchased_item.sales_order.customer.name %></td>
         <td><%= purchased_item.serial_number %></td>
         <td><%= link_to 'Show', purchased_item %></td>
         <td><%= link_to 'Edit', edit_purchased_item_path(purchased_item) %></td>
