@@ -69,6 +69,6 @@ class PurchasedItemsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def purchased_item_params
-      params.require(:purchased_item).permit(:item_id, :serial_number)
+      params.require(:purchased_item).permit(:item_id, :sales_order_id, :serial_number)
     end
 end

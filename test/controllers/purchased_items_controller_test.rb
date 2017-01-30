@@ -17,7 +17,7 @@ class PurchasedItemsControllerTest < ActionDispatch::IntegrationTest
 
   test "should create purchased_item" do
     assert_difference('PurchasedItem.count') do
-      post purchased_items_url, params: { purchased_item: { item_id: @purchased_item.item_id, serial_number: @purchased_item.serial_number } }
+      post purchased_items_url, params: { purchased_item: { item_id: @purchased_item.item_id, sales_order_id: @purchased_item.sales_order_id, serial_number: @purchased_item.serial_number } }
     end
 
     assert_redirected_to purchased_item_url(PurchasedItem.last)
@@ -34,7 +34,7 @@ class PurchasedItemsControllerTest < ActionDispatch::IntegrationTest
   end
 
   test "should update purchased_item" do
-    patch purchased_item_url(@purchased_item), params: { purchased_item: { item_id: @purchased_item.item_id, serial_number: @purchased_item.serial_number } }
+    patch purchased_item_url(@purchased_item), params: { purchased_item: { item_id: @purchased_item.item_id, sales_order_id: @purchased_item.sales_order_id, serial_number: @purchased_item.serial_number } }
     assert_redirected_to purchased_item_url(@purchased_item)
   end
 
