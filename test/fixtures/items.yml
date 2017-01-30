@@ -6,7 +6,7 @@ one:
   manufacturer: MyString
   model: MyString
   length: MyString
-  wirdth: MyString
+  width: MyString
   height: MyString
   shipping_weight_lbs: MyString
   shipping_weight_kgs: MyString
@@ -17,7 +17,7 @@ two:
   manufacturer: MyString
   model: MyString
   length: MyString
-  wirdth: MyString
+  width: MyString
   height: MyString
   shipping_weight_lbs: MyString
   shipping_weight_kgs: MyString

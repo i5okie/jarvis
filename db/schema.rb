@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170130201608) do
+ActiveRecord::Schema.define(version: 20170130213633) do
 
   create_table "contact_notes", force: :cascade do |t|
     t.integer  "contact_id"
@@ -77,7 +77,7 @@ ActiveRecord::Schema.define(version: 20170130201608) do
     t.string   "manufacturer"
     t.string   "model"
     t.string   "length"
-    t.string   "wirdth"
+    t.string   "width"
     t.string   "height"
     t.string   "shipping_weight_lbs"
     t.string   "shipping_weight_kgs"

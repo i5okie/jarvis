@@ -6,7 +6,7 @@ class CreateItems < ActiveRecord::Migration[5.0]
       t.string :manufacturer
       t.string :model
       t.string :length
-      t.string :wirdth
+      t.string :width
       t.string :height
       t.string :shipping_weight_lbs
       t.string :shipping_weight_kgs
