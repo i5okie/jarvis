@@ -1,0 +1,9 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  shipping_address: one
+  customer: one
+
+two:
+  shipping_address: two
+  customer: two

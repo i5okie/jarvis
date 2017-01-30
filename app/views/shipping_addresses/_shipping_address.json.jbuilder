@@ -1,0 +1,2 @@
+json.extract! shipping_address, :id, :address_alias, :address_type, :address_1, :address_2, :address_city, :address_country, :address_state, :address_zip, :customer_id, :created_at, :updated_at
+json.url shipping_address_url(shipping_address, format: :json)

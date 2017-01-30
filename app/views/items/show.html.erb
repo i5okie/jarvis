@@ -1,0 +1,49 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @item.name %>
+</p>
+
+<p>
+  <strong>Description:</strong>
+  <%= @item.description %>
+</p>
+
+<p>
+  <strong>Manufacturer:</strong>
+  <%= @item.manufacturer %>
+</p>
+
+<p>
+  <strong>Model name:</strong>
+  <%= @item.model_name %>
+</p>
+
+<p>
+  <strong>Length:</strong>
+  <%= @item.length %>
+</p>
+
+<p>
+  <strong>Wirdth:</strong>
+  <%= @item.wirdth %>
+</p>
+
+<p>
+  <strong>Height:</strong>
+  <%= @item.height %>
+</p>
+
+<p>
+  <strong>Shipping weight lbs:</strong>
+  <%= @item.shipping_weight_lbs %>
+</p>
+
+<p>
+  <strong>Shipping weight kgs:</strong>
+  <%= @item.shipping_weight_kgs %>
+</p>
+
+<%= link_to 'Edit', edit_item_path(@item) %> |
+<%= link_to 'Back', items_path %>

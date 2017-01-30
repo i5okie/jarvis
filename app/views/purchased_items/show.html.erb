@@ -1,0 +1,14 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Item:</strong>
+  <%= @purchased_item.item %>
+</p>
+
+<p>
+  <strong>Serial number:</strong>
+  <%= @purchased_item.serial_number %>
+</p>
+
+<%= link_to 'Edit', edit_purchased_item_path(@purchased_item) %> |
+<%= link_to 'Back', purchased_items_path %>

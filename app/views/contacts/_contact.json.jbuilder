@@ -1,0 +1,2 @@
+json.extract! contact, :id, :contact_alias, :contact_type, :first_name, :last_name, :email_address, :phone_number, :extension, :mobile_phone_number, :customer_id, :created_at, :updated_at
+json.url contact_url(contact, format: :json)

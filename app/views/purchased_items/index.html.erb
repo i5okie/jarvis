@@ -1,0 +1,29 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Purchased Items</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Item</th>
+      <th>Serial number</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @purchased_items.each do |purchased_item| %>
+      <tr>
+        <td><%= purchased_item.item %></td>
+        <td><%= purchased_item.serial_number %></td>
+        <td><%= link_to 'Show', purchased_item %></td>
+        <td><%= link_to 'Edit', edit_purchased_item_path(purchased_item) %></td>
+        <td><%= link_to 'Destroy', purchased_item, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Purchased Item', new_purchased_item_path %>

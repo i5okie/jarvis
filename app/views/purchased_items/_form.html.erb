@@ -1,0 +1,27 @@
+<%= form_for(purchased_item) do |f| %>
+  <% if purchased_item.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(purchased_item.errors.count, "error") %> prohibited this purchased_item from being saved:</h2>
+
+      <ul>
+      <% purchased_item.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :item_id %>
+    <%= f.text_field :item_id %>
+  </div>
+
+  <div class="field">
+    <%= f.label :serial_number %>
+    <%= f.text_field :serial_number %>
+  </div>
+
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>
