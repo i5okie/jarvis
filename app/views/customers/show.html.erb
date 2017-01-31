@@ -15,5 +15,24 @@
   <%= @customer.fax_number %>
 </p>
 
+
+<p>
+ <strong>Contacts:</strong>
+ <% @customer.contacts.each do |contact| %>
+  <p>
+   <%= contact.contact_alias %> <%= contact.phone_number %>
+  </p>
+ <% end %>
+</p>
+
+<p>
+  <strong>Addresses</strong>
+  <% @customer.shipping_addresses.each do |adr| %>
+    <p>
+      <%= adr.address_alias%>
+    </p>
+  <% end %>
+</p>
+
 <%= link_to 'Edit', edit_customer_path(@customer) %> |
 <%= link_to 'Back', customers_path %>
