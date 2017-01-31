@@ -10,6 +10,7 @@ class SalesOrdersController < ApplicationController
   # GET /sales_orders/1
   # GET /sales_orders/1.json
   def show
+    @purchased_items = @sales_order.purchased_items
   end
 
   # GET /sales_orders/new

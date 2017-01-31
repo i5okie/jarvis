@@ -1,9 +1,12 @@
 <p id="notice"><%= notice %></p>
 
-<p>
-  <strong>Number:</strong>
-  <%= @sales_order.number %>
-</p>
+
+<div class="page-header">
+  <h1><%= @sales_order.number %> <small><%= @sales_order.customer.name %></small></h1>
+</div>
+
+
+<br>
 
 <p>
   <strong>Date:</strong>
@@ -21,10 +24,15 @@
 </p>
 
 
+<h1>Products</h1>
+<strong>name --------------- serial number --------------- note</strong>
 <p>
-
+  <% @purchased_items.each do |pi| %>
+    <p>
+    <%= pi.item.name %> --- <%= pi.serial_number %>
+    </p>
+  <% end %>
 </p>
-
 
 
 <%= link_to 'Edit', edit_sales_order_path(@sales_order) %> |
