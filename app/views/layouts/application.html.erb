@@ -8,52 +8,89 @@
     </head>
     <body>
         <div id="main-container" class="container">
-            <div class="row">
-                <div class="col-xs-3">
-                    <h3>Jarvis</h3>
-                </div>
-                <div class="col-xs-9">
-                    <ul class="nav nav-pills">
-                        <li role="presentation" class="dropdown">
-                            <a class="dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">
-                                Customers
-                                <span class="caret"></span>
-                            </a>
-                            <ul class="dropdown-menu">
-                                <li role="presentation">
-                                    <a href="<%= customers_path %>">Customers</a>
-                                </li>
-                                <li role="separator" class="divider"></li>
-                                <li role="presentation">
-                                    <a href="<%= contacts_path %>">Contacts</a>
-                                </li>
-                                <li role="presentation">
-                                    <a href="<%= shipping_addresses_path %>">Shipping Addresses</a>
-                                </li>
-                            </ul>
-                        </li>
-                        <li role="presentation">
-                            <a href="<%= sales_orders_path %>">Sales Orders</a>
-                        </li>
-                        <li role="presentation" class="dropdown">
-                            <a class="dropdown-toggle" data-toggle="dropdown" href="<%= items_path %>" role="button" aria-haspopup="true" aria-expanded="false">
-                                Items
-                                <span class="caret"></span>
-                            </a>
-                            <ul class="dropdown-menu">
-                                <li role="presentation">
-                                    <a href="<%= items_path %>">Items</a>
-                                </li>
-                                <li role="separator" class="divider"></li>
-                                <li role="presentation">
-                                    <a href="<%= purchased_items_path %>">Purchased Items</a>
-                                </li>
-                            </ul>
-                        </li>
+            <nav class="navbar navbar-default">
+                <div class="container-fluid">
+                    <!-- Brand and toggle get grouped for better mobile display -->
+                    <div class="navbar-header">
+                        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+                            <span class="sr-only">Toggle navigation</span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                        </button>
+                        <a class="navbar-brand" href="#">Brand</a>
+                    </div>
 
-                    </ul>
+                    <!-- Collect the nav links, forms, and other content for toggling -->
+                    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                        <ul class="nav navbar-nav">
+                            <li role="presentation" class="dropdown">
+                                <a class="dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">
+                                    Customers
+                                    <span class="caret"></span>
+                                </a>
+                                <ul class="dropdown-menu">
+                                    <li role="presentation">
+                                        <a href="<%= customers_path %>">Customers</a>
+                                    </li>
+                                    <li role="separator" class="divider"></li>
+                                    <li role="presentation">
+                                        <a href="<%= contacts_path %>">Contacts</a>
+                                    </li>
+                                    <li role="presentation">
+                                        <a href="<%= shipping_addresses_path %>">Shipping Addresses</a>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li role="presentation">
+                                <a href="<%= sales_orders_path %>">Sales Orders</a>
+                            </li>
+                            <li role="presentation" class="dropdown">
+                                <a class="dropdown-toggle" data-toggle="dropdown" href="<%= items_path %>" role="button" aria-haspopup="true" aria-expanded="false">
+                                    Items
+                                    <span class="caret"></span>
+                                </a>
+                                <ul class="dropdown-menu">
+                                    <li role="presentation">
+                                        <a href="<%= items_path %>">Items</a>
+                                    </li>
+                                    <li role="separator" class="divider"></li>
+                                    <li role="presentation">
+                                        <a href="<%= purchased_items_path %>">Purchased Items</a>
+                                    </li>
+                                </ul>
+                            </li>
+                        </ul>
+                        <ul class="nav navbar-nav navbar-right">
+                            <li>
+                                <a href="#">Link</a>
+                            </li>
+                            <li class="dropdown">
+                                <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Dropdown
+                                    <span class="caret"></span>
+                                </a>
+                                <ul class="dropdown-menu">
+                                    <li>
+                                        <a href="#">Action</a>
+                                    </li>
+                                    <li>
+                                        <a href="#">Another action</a>
+                                    </li>
+                                    <li>
+                                        <a href="#">Something else here</a>
+                                    </li>
+                                    <li role="separator" class="divider"></li>
+                                    <li>
+                                        <a href="#">Separated link</a>
+                                    </li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </div>
+                    <!-- /.navbar-collapse -->
                 </div>
-            </div>
+                <!-- /.container-fluid -->
+            </nav>
             <div class="row">
                 <div class="col-xs-9">
                     <%= yield %>
