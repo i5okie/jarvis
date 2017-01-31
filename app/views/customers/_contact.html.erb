@@ -1,8 +1,7 @@
 <div class="col-md-3">
     <div class="contact-box center-version">
         <a href="#profile.html">
-            <img alt="image" class="img-circle" 
-src="http://bootdey.com/img/Content/avatar/avatar1.png">
+            <img alt="image" class="img-circle" src="http://bootdey.com/img/Content/avatar/avatar1.png">
             <h3 class="m-b-xs">
                 <strong><%= contact.full_name %></strong>
             </h3>
@@ -15,50 +14,28 @@ src="http://bootdey.com/img/Content/avatar/avatar1.png">
                 (123) 456-7890
             </address>
             <p>
-                <strong>Email address:</strong>
-                <%= contact.email_address %>
-            </p>
-            <p>
-                <strong>Phone number:</strong>
-                <%= contact.phone_number %>
-            </p>
-            <p>
-                <strong>Extension:</strong>
-                <%= contact.extension %>
-            </p>
-            <p>
-                <strong>Mobile phone number:</strong>
-                <%= contact.mobile_phone_number %>
-            </p>
-        </a>
-        <div class="contact-box-footer">
-            <div class="m-t-xs btn-group">
-                <a class="btn btn-xs btn-white">
-                    <i class="fa fa-phone"></i>
-                    Call
-                </a>
                 <a class="btn btn-xs btn-white" href="<%= contact.email_address %>">
                     <i class="fa fa-envelope"></i>
-                    Email</a>
+                    <%= contact.email_address %></a>
+
+            </p>
+            <p>
                 <a class="btn btn-xs btn-white">
-                    <i class="fa fa-user-plus"></i>
-                    Follow</a>
-            </div>
-        </div>
-    </div> </div>
-        <p>
-            <strong>Email address:</strong>
-            <%= contact.email_address %>
-        </p>
-        <p>
-            <strong>Phone number:</strong>
-            <%= contact.phone_number %>
-        </p>
-        <p>
-            <strong>Extension:</strong>
-            <%= contact.extension %>
-        </p>
-        <p>
-            <strong>Mobile phone number:</strong>
-            <%= contact.mobile_phone_number %>
-        </p>
+                    <i class="fa fa-phone"></i>
+                    Office:
+                    <%= contact.phone_number %>
+                    Ext:
+                    <%= contact.extension %>
+                </a>
+                <a class="btn btn-xs btn-white">
+                    <i class="fa fa-phone"></i>
+                    Mobile:
+                    <%= contact.mobile_phone_number %>
+                    Ext:
+                    <%= contact.extension %>
+                </a>
+
+            </p>
+        </a>
+    </div>
+</div>
