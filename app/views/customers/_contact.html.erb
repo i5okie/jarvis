@@ -1,27 +1,64 @@
-<div class="panel panel-default">
-    <div class="panel-heading">
-        <h3 class="panel-title"><%= contact.full_name %></h3>
-    </div>
-    <div class="panel-body">
+<div class="col-md-3">
+    <div class="contact-box center-version">
+        <a href="#profile.html">
+            <img alt="image" class="img-circle" 
+src="http://bootdey.com/img/Content/avatar/avatar1.png">
+            <h3 class="m-b-xs">
+                <strong><%= contact.full_name %></strong>
+            </h3>
+            <div class="font-bold">Graphics designer</div>
+            <address class="m-t-md">
+                <strong>Twitter, Inc.</strong><br>
+                795 Folsom Ave, Suite 600<br>
+                San Francisco, CA 94107<br>
+                <abbr title="Phone">P:</abbr>
+                (123) 456-7890
+            </address>
+            <p>
+                <strong>Email address:</strong>
+                <%= contact.email_address %>
+            </p>
+            <p>
+                <strong>Phone number:</strong>
+                <%= contact.phone_number %>
+            </p>
+            <p>
+                <strong>Extension:</strong>
+                <%= contact.extension %>
+            </p>
+            <p>
+                <strong>Mobile phone number:</strong>
+                <%= contact.mobile_phone_number %>
+            </p>
+        </a>
+        <div class="contact-box-footer">
+            <div class="m-t-xs btn-group">
+                <a class="btn btn-xs btn-white">
+                    <i class="fa fa-phone"></i>
+                    Call
+                </a>
+                <a class="btn btn-xs btn-white" href="<%= contact.email_address %>">
+                    <i class="fa fa-envelope"></i>
+                    Email</a>
+                <a class="btn btn-xs btn-white">
+                    <i class="fa fa-user-plus"></i>
+                    Follow</a>
+            </div>
+        </div>
+    </div> </div>
         <p>
             <strong>Email address:</strong>
-            <%= @contact.email_address %>
+            <%= contact.email_address %>
         </p>
-
         <p>
             <strong>Phone number:</strong>
-            <%= @contact.phone_number %>
+            <%= contact.phone_number %>
         </p>
-
         <p>
             <strong>Extension:</strong>
-            <%= @contact.extension %>
+            <%= contact.extension %>
         </p>
-
         <p>
             <strong>Mobile phone number:</strong>
-            <%= @contact.mobile_phone_number %>
+            <%= contact.mobile_phone_number %>
         </p>
-
-    </div>
-</div>
