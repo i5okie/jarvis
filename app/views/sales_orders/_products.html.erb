@@ -22,9 +22,9 @@
       <tr>
         <td><%= pi.item.name %></td>
         <td><%= pi.serial_number %></td>
-        <td><%= link_to 'Show', purchased_item %></td>
-        <td><%= link_to 'Edit', edit_purchased_item_path(purchased_item) %></td>
-        <td><%= link_to 'Destroy', purchased_item, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td><%= link_to 'Show', purchased_item(pi) %></td>
+        <td><%= link_to 'Edit', edit_purchased_item_path(pi) %></td>
+        <td><%= link_to 'Destroy', purchased_item(pi), method: :delete, data: { confirm: 'Are you sure?' } %></td>
       </tr>
     <% end %>
   </tbody>
