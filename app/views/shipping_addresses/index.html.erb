@@ -2,7 +2,7 @@
 
 <h1>Shipping Addresses</h1>
 
-<table>
+<table class="table table-hover">
   <thead>
     <tr>
       <th>Address alias</th>
@@ -29,7 +29,7 @@
         <td><%= shipping_address.address_country %></td>
         <td><%= shipping_address.address_state %></td>
         <td><%= shipping_address.address_zip %></td>
-        <td><%= shipping_address.customer %></td>
+        <td><%= shipping_address.customer.name %></td>
         <td><%= link_to 'Show', shipping_address %></td>
         <td><%= link_to 'Edit', edit_shipping_address_path(shipping_address) %></td>
         <td><%= link_to 'Destroy', shipping_address, method: :delete, data: { confirm: 'Are you sure?' } %></td>
