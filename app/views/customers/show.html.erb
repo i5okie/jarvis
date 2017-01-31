@@ -19,9 +19,9 @@
 <p>
  <strong>Contacts:</strong>
  <% @customer.contacts.each do |contact| %>
-  <p>
-   <%= contact.contact_alias %> <%= contact.phone_number %>
-  </p>
+
+  <%= render 'contact', contact: contact %>
+  
  <% end %>
 </p>
 

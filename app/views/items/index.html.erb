@@ -9,9 +9,7 @@
       <th>Description</th>
       <th>Manufacturer</th>
       <th>Model</th>
-      <th>Length</th>
-      <th>Width</th>
-      <th>Height</th>
+      <th colspan="3">H x W x L</th>
       <th>Shipping weight lbs</th>
       <th>Shipping weight kgs</th>
       <th colspan="3"></th>
@@ -24,10 +22,10 @@
         <td><%= item.name %></td>
         <td><%= item.description %></td>
         <td><%= item.manufacturer %></td>
-        <td><%= item.model %></td>
-        <td><%= item.length %></td>
+        <td><%= item.model %> x</td>
+        <td><%= item.height %> x</td>
         <td><%= item.width %></td>
-        <td><%= item.height %></td>
+        <td><%= item.length %></td>
         <td><%= item.shipping_weight_lbs %></td>
         <td><%= item.shipping_weight_kgs %></td>
         <td><%= link_to 'Show', item %></td>
