@@ -1,46 +1,64 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <title>Jarvis</title>
-    <%= csrf_meta_tags %>
-    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
-    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
-  </head>
-  <body>
-    <div id="main-container" class="container">
-        <div class="row">
-            <div class="col-xs-3">
-                <h3>Jarvis</h3>
+    <head>
+        <title>Jarvis</title>
+        <%= csrf_meta_tags %>
+        <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+        <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+    </head>
+    <body>
+        <div id="main-container" class="container">
+            <div class="row">
+                <div class="col-xs-3">
+                    <h3>Jarvis</h3>
+                </div>
+                <div class="col-xs-9">
+                    <ul class="nav nav-pills">
+                        <li role="presentation" class="dropdown">
+                            <a class="dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">
+                                Customers
+                                <span class="caret"></span>
+                            </a>
+                            <ul class="dropdown-menu">
+                                <li role="presentation">
+                                    <a href="<%= customers_path %>">Customers</a>
+                                </li>
+                                <li role="separator" class="divider"></li>
+                                <li role="presentation">
+                                    <a href="<%= contacts_path %>">Contacts</a>
+                                </li>
+                                <li role="presentation">
+                                    <a href="<%= shipping_addresses_path %>">Shipping Addresses</a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li role="presentation">
+                            <a href="<%= sales_orders_path %>">Sales Orders</a>
+                        </li>
+                        <li role="presentation" class="dropdown">
+                            <a class="dropdown-toggle" data-toggle="dropdown" href="<%= items_path %>" role="button" aria-haspopup="true" aria-expanded="false">
+                                Items
+                                <span class="caret"></span>
+                            </a>
+                            <ul class="dropdown-menu">
+                                <li role="presentation">
+                                    <a href="<%= items_path %>">Items</a>
+                                </li>
+                                <li role="separator" class="divider"></li>
+                                <li role="presentation">
+                                    <a href="<%= purchased_items_path %>">Purchased Items</a>
+                                </li>
+                            </ul>
+                        </li>
+
+                    </ul>
+                </div>
             </div>
-            <div class="col-xs-9">
-                <ul class="nav nav-pills">
-  <li role="presentation" class="dropdown">
-    <a class="dropdown-toggle" data-toggle="dropdown" href="<%= customers_path %>" role="button" aria-haspopup="true" aria-expanded="false">
-      Customers <span class="caret"></span>
-    </a>
-    <ul class="dropdown-menu">
-      <li role="presentation"><a href="<%= contacts_path %>">Contacts</a></li>
-      <li role="presentation"><a href="<%= shipping_addresses_path %>">Shipping Addresses</a></li>
-    </ul>
-  </li>
-  <li role="presentation"><a href="<%= sales_orders_path %>">Sales Orders</a></li>
-  <li role="presentation" class="dropdown">
-    <a class="dropdown-toggle" data-toggle="dropdown" href="<%= items_path %>" role="button" aria-haspopup="true" aria-expanded="false">
-      Items <span class="caret"></span>
-    </a>
-    <ul class="dropdown-menu">
-      <li role="presentation"><a href="<%= purchased_items_path %>">Purchased Items</a></li>
-    </ul>
-  </li>
-  
-</ul>
+            <div class="row">
+                <div class="col-xs-9">
+                    <%= yield %>
+                </div>
             </div>
         </div>
-        <div class="row">
-            <div class="col-xs-9">
-                <%= yield %>
-            </div>
-        </div>
-    </div>
-  </body>
+    </body>
 </html>
