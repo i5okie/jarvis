@@ -1,14 +1,6 @@
 <h1>Products</h1>
 
-<p>
-  <% @purchased_items.each do |pi| %>
-    <p>
-    <%= pi.item.name %> --- <%= pi.serial_number %>
-    </p>
-  <% end %>
-</p>
-
-<table>
+<table class="table hover-table">
   <thead>
     <tr>
       <th>Name</th>
@@ -22,9 +14,9 @@
       <tr>
         <td><%= pi.item.name %></td>
         <td><%= pi.serial_number %></td>
-        <td><%= link_to 'Show', purchased_item(pi) %></td>
+        <td><%= link_to 'Show', pi %></td>
         <td><%= link_to 'Edit', edit_purchased_item_path(pi) %></td>
-        <td><%= link_to 'Destroy', purchased_item(pi), method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td><%= link_to 'Destroy', pi, method: :delete, data: { confirm: 'Are you sure?' } %></td>
       </tr>
     <% end %>
   </tbody>
