@@ -1,0 +1,31 @@
+<h1>Products</h1>
+
+<p>
+  <% @purchased_items.each do |pi| %>
+    <p>
+    <%= pi.item.name %> --- <%= pi.serial_number %>
+    </p>
+  <% end %>
+</p>
+
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Serial Number</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @purchased_items.each do |pi| %>
+      <tr>
+        <td><%= pi.item.name %></td>
+        <td><%= pi.serial_number %></td>
+        <td><%= link_to 'Show', purchased_item %></td>
+        <td><%= link_to 'Edit', edit_purchased_item_path(purchased_item) %></td>
+        <td><%= link_to 'Destroy', purchased_item, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
