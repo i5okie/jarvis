@@ -8,26 +8,20 @@
             <div class="font-bold">Graphics designer</div>
             <address class="m-t-md">
                 <strong><%= contact.contact_type %></strong><br>
-            </address>
-            <div>
                 <a class="btn btn-xs btn-white" href="<%= contact.email_address %>">
                     <i class="fa fa-envelope"></i>
                     <%= contact.email_address %></a>
-
-            </div>
-            <div>
-                <a class="btn btn-xs btn-white">
-                    <i class="fa fa-phone"></i>
-                    <%= contact.phone_number %>
-                    Ext:
-                    <%= contact.extension %>
-                </a>
-                <a class="btn btn-xs btn-white">
-                    <i class="fa fa-mobile"></i>
-                    <%= contact.mobile_phone_number %>
-                </a>
-
-            </div>
+                    <a class="btn btn-xs btn-white">
+                        <i class="fa fa-phone"></i>
+                        <%= contact.phone_number %>
+                        Ext:
+                        <%= contact.extension %>
+                    </a>
+                    <a class="btn btn-xs btn-white">
+                        <i class="fa fa-mobile"></i>
+                        <%= contact.mobile_phone_number %>
+                    </a>
+            </address>
         </a>
     </div>
 </div>
