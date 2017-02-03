@@ -11,24 +11,24 @@
     </div>
   <% end %>
 
-  <div class="field">
-    <%= f.label :name %>
+  <div class="row">
+        <div class="input-field col s4">
+          <%= f.label :name %>
     <%= f.text_field :name %>
-  </div>
+        </div>
+        <div class="input-field col s4">
+          <%= f.label :manufacturer %>
+    <%= f.text_field :manufacturer %>
+        </div>
+        <div class="input-field col s4">
+          <%= f.label :model %>
+    <%= f.text_field :model %>
+        </div>
+      </div>
 
   <div class="field">
     <%= f.label :description %>
     <%= f.text_field :description %>
-  </div>
-
-  <div class="field">
-    <%= f.label :manufacturer %>
-    <%= f.text_field :manufacturer %>
-  </div>
-
-  <div class="field">
-    <%= f.label :model %>
-    <%= f.text_field :model %>
   </div>
 
   <div class="field">
@@ -52,6 +52,14 @@
   </div>
 
   <div class="actions">
-    <%= f.submit %>
+    
   </div>
 <% end %>
+
+<div class="row">
+      <div class="col s1"><a href="<%= items_path %>"class="waves-effect waves-light btn amber">Cancel</a></div>
+      <div class="col s9"></div>
+      <div class="col s2 right-align"><button class="btn waves-effect waves-light green accent-3" type="submit" name="action">Submit
+      <i class="material-icons right">send</i>
+    </button></div>
+    </div>
