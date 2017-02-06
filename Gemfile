@@ -22,8 +22,13 @@ gem 'coffee-rails', '~> 4.2'
 # gem 'therubyracer', platforms: :ruby
 
 gem 'materialize-sass'
-gem 'font-awesome-rails'
 gem 'rails-units'
+
+source 'https://rails-assets.org' do
+  gem 'rails-assets-font-awesome'
+  gem 'rails-assets-leaflet'
++end
+
 
 gem 'jquery-datatables-rails', '~> 3.4.0'
 

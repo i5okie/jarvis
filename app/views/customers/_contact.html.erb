@@ -1,21 +1,4 @@
-<div class="col-md-3">
-    <div class="contact-box center-version">
-        <img alt="image" class="img-circle" src="http://bootdey.com/img/Content/avatar/avatar1.png">
-        <h3 class="m-b-xs">
-            <strong><%= contact.full_name %></strong>
-        </h3>
-        <div>Graphics designer</div>
-        <strong><%= contact.contact_type %></strong><br>
-        <a href="<%= contact.email_address %>">
-            <i class="fa fa-envelope"></i>
-            <%= contact.email_address %></a>
-        <a >
-            <i class="fa fa-phone"></i>
-            <%= contact.phone_number %>
-            Ext:
-            <%= contact.extension %></a>
-        <a >
-            <i class="fa fa-mobile"></i>
-            <%= contact.mobile_phone_number %></a>
-    </div>
+<div class="chip">
+  <img src="http://bootdey.com/img/Content/avatar/avatar1.png" alt="Contact Person">
+  <%= contact.full_name %> | <small>Office: <%= phone_formatted(contact.phone_number, contact.extension) %></small> | <small>Mobile: <%= number_to_phone(contact.mobile_phone_number, area_code: true) %></small>
 </div>
