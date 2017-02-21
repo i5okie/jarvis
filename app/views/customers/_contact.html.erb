@@ -1,4 +1,4 @@
 <div class="chip">
   <img src="http://bootdey.com/img/Content/avatar/avatar1.png" alt="Contact Person">
-  <%= contact.full_name %> | <small>Office: <%= phone_formatted(contact.phone_number, contact.extension) %></small> | <small>Mobile: <%= number_to_phone(contact.mobile_phone_number, area_code: true) %></small>
+  <span class="bold-text"><%= contact.full_name %></span> | Office: <%= phone_formatted(contact.phone_number, contact.extension) %> | Mobile: <%= number_to_phone(contact.mobile_phone_number, area_code: true) %>
 </div>

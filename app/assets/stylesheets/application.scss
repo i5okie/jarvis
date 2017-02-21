@@ -7,3 +7,15 @@ $secondary-color: color("yellow", "base") !default;
 @import "font-awesome";
 
 @import "contacts";
+@import "customers";
+
+.bold-text {font-weight: bold;}
+
+.roundit {-webkit-border-radius: 10px;
+-moz-border-radius: 10px;
+border-radius: 10px;}
+
+.table-item {font-weight: 400; font-size: 1.25em;}
+.table-item a {color: #000;}
+
+.compact tr {height: 10px;}
