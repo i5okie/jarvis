@@ -1,4 +1,7 @@
 Rails.application.routes.draw do
+  devise_for :admin_users, ActiveAdmin::Devise.config
+  ActiveAdmin.routes(self)
+  devise_for :users
   resources :purchased_items
   resources :sales_orders
   resources :shipping_addresses
@@ -7,5 +10,5 @@ Rails.application.routes.draw do
   resources :notes
   resources :contacts
   
-  # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
+  root to: 'customers#index'
 end

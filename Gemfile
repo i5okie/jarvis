@@ -21,13 +21,19 @@ gem 'coffee-rails', '~> 4.2'
 # See https://github.com/rails/execjs#readme for more supported runtimes
 # gem 'therubyracer', platforms: :ruby
 
+gem 'toastr-rails'
+gem 'devise'
+
+gem 'activeadmin', git: 'https://github.com/activeadmin/activeadmin'
+gem 'inherited_resources', git: 'https://github.com/activeadmin/inherited_resources'
+
 gem 'materialize-sass'
 gem 'rails-units'
 
 source 'https://rails-assets.org' do
   gem 'rails-assets-font-awesome'
   gem 'rails-assets-leaflet'
-+end
+end
 
 
 gem 'jquery-datatables-rails', '~> 3.4.0'
